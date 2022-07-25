@@ -7,14 +7,15 @@ from scipy.stats import norm
 import matplotlib.pyplot as plt
 import numpy as np
 
-# As input, the function uses the sample sizes n1 and n2, and the number of positive outcomes (np1 and np2) within each sample population. p gives the desired confidence interval.
+# As input, the function uses the sample sizes n1 and n2, and the number of positive outcomes (np1 and np2) 
+# within each sample population. p gives the desired confidence interval.
 
 def ConfInt(np1, np2, n1, n2, p):
 
 	p1 = np1 / n1
 	p2 = np2 / n2	
 
-	Sp = np.sqrt( (p1*(1-p1))/n1 + (p2*(1-p2))/n2 )
+	Sp = np.sqrt( ( p1 * ( 1 - p1 )) / n1 + ( p2 * ( 1 - p2 )) / n2 )
 
 	if ( n1 < 30 ) or ( n2 < 30 ):
 		score = t.ppf( p + (1 - p) / 2 , n1 + n2 - 2 )
