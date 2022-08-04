@@ -25,6 +25,15 @@ def ConfInt(np1, np2, n1, n2, p):
 	lower = (p2 - p1) - score * Sp
 	upper = (p2 - p1) + score * Sp
 	
+	statement = ""
+
+	if ( lower < 0 and upper < 0 ) or ( lower > 0 and upper > 0 ):
+		statement = "It is highly likely that there is a true difference in the proportion of people who answered 'yes' between those who took the first aid course less than and more than 12 months previously."
+	else:
+		statement = "It is highly likely that there is no true difference in the proportion of people who answered 'yes' between those who took the first aid course less than and more than 12 months previously."
+
 	meandiff = p1 - p2
 
-	return meandiff, [ lower, upper ]
+	
+
+	return "The difference between the means is " + str(meandiff) + ". There is a " + str(int(p*100)) + "% chance that the confidence interval of " + str([lower, upper]) + " contains the true difference in the proportion of people who answered 'yes' between those who took the First Aid Course less than and more than 12 months previously. " + statement
