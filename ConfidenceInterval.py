@@ -1,4 +1,4 @@
-	#!/usr/bin/python
+#!/usr/bin/python
 
 # This code calculates the confidence interval for two sets of binary data
 
