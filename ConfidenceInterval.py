@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # As input, the function uses the sample sizes n1 and n2, and the number of positive outcomes (np1 and np2) 
-# within each sample population. p gives the desired confidence interval.
+# within each sample population. p is the desired confidence interval.
 
 def ConfInt(np1, np2, n1, n2, p):
 
