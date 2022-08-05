@@ -33,10 +33,10 @@ def ConfInt(np1, np2, n1, n2, p):
 
 	if ( lower < 0 and upper < 0 ) or ( lower > 0 and upper > 0 ):
 		statement = "It is highly likely that there is a true difference in the proportion of people who answered 'yes' between those who took the first aid course less than and more than 12 months previously."
-		sigdiff = "yes"
+		sigdiff = "ja"
 	else:
 		statement = "It is highly likely that there is no true difference in the proportion of people who answered 'yes' between those who took the first aid course less than and more than 12 months previously."
-		sigdiff = "no"
+		sigdiff = "nein"
 
 	meandiff = p1 - p2
 
